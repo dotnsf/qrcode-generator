@@ -9,7 +9,7 @@ const encode = (data, errorCorrectionLevel, typeNumber, mode) => {
   if (typeof errorCorrectionLevel == "number") {
     errorCorrectionLevel = "LMQH".charAt(errorCorrectionLevel);
   }
-  errorCorrectionLevel = errorCorrectionLevel || "L";
+  errorCorrectionLevel = errorCorrectionLevel || "M";
   mode = mode || qrDetectMode(data);
   const getQR = () => {
     if (!typeNumber) {
